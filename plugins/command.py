@@ -76,8 +76,7 @@ async def start_command(client, message: Message):
     await message.reply_video(
         video=START_PIC,
         caption=script.START_TXT.format(mention, temp.U_NAME, temp.U_NAME),
-        reply_markup=reply_keyboard,
-        has_spoiler=True
+        reply_markup=reply_keyboard
     )
 
 # =================================================
