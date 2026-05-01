@@ -73,8 +73,8 @@ async def start_command(client, message: Message):
         one_time_keyboard=False
     )
 
-    await message.reply_photo(
-        photo=START_PIC,
+    await message.reply_video(
+        video=START_PIC,
         caption=script.START_TXT.format(mention, temp.U_NAME, temp.U_NAME),
         reply_markup=reply_keyboard,
         has_spoiler=True
