@@ -12,34 +12,34 @@ def str_to_bool(val, default=False):
 # =========================================================
 # 🤖 BOT BASIC INFORMATION
 # =========================================================
-API_ID = int(environ.get("API_ID", "0"))
-API_HASH = environ.get("API_HASH", "")
+API_ID = int(environ.get("API_ID", "26585721"))
+API_HASH = environ.get("API_HASH", "4887f511028d113e5f11d0e6fc583916")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 PORT = int(environ.get("PORT", "8080"))
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
-OWNER_USERNAME = environ.get("OWNER_USERNAME", "BOT_OWNER26")
+OWNER_USERNAME = environ.get("OWNER_USERNAME", "Kimiko_LINKS")
 
 # =========================================================
 # 💾 DATABASE CONFIGURATION
 # =========================================================
-DB_URL = environ.get("DATABASE_URI", "")
+DB_URL = environ.get("DATABASE_URI", "mongodb+srv://gxmon239:f4l7bKrhka3Fh2cV@cluster0.qmblwql.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DB_NAME = environ.get("DATABASE_NAME", "testing")
 
 # =========================================================
 # 📢 CHANNELS & ADMINS
 # =========================================================
-ADMINS = int(environ.get("ADMINS", "0"))
+ADMINS = int(environ.get("ADMINS", "7326542298"))
 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "0"))
-PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", "0"))
-VERIFIED_LOG = int(environ.get("VERIFIED_LOG", "0"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1003822534345"))
+PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", "-1003822534345"))
+VERIFIED_LOG = int(environ.get("VERIFIED_LOG", "-1003822534345"))
 
-POST_CHANNEL = int(environ.get("POST_CHANNEL", "0"))
-VIDEO_CHANNEL = int(environ.get("VIDEO_CHANNEL", "0"))
-BRAZZER_CHANNEL = int(environ.get("BRAZZER_CHANNEL", "0"))
+POST_CHANNEL = int(environ.get("POST_CHANNEL", "-1003987324614"))
+VIDEO_CHANNEL = int(environ.get("VIDEO_CHANNEL", "-1003983776737"))
+BRAZZER_CHANNEL = int(environ.get("BRAZZER_CHANNEL", "-1003926505266"))
 
 # Auth channels list
-auth_channel_str = environ.get("AUTH_CHANNEL", "")
+auth_channel_str = environ.get("AUTH_CHANNEL", "-1003973951164")
 AUTH_CHANNEL = [int(x) for x in auth_channel_str.split() if x.strip().lstrip("-").isdigit()]
 
 # =========================================================
@@ -48,15 +48,15 @@ AUTH_CHANNEL = [int(x) for x in auth_channel_str.split() if x.strip().lstrip("-"
 FSUB = str_to_bool(environ.get("FSUB"), True)
 IS_VERIFY = str_to_bool(environ.get("IS_VERIFY"), False)
 POST_SHORTLINK = str_to_bool(environ.get("POST_SHORTLINK"), False)
-SEND_POST = str_to_bool(environ.get("SEND_POST"), False)
+SEND_POST = str_to_bool(environ.get("SEND_POST"), True)
 PROTECT_CONTENT = str_to_bool(environ.get("PROTECT_CONTENT"), True)
 
 # =========================================================
 # 🔢 LIMITS
 # =========================================================
-DAILY_LIMIT = int(environ.get("DAILY_LIMIT", "5"))
-VERIFICATION_DAILY_LIMIT = int(environ.get("VERIFICATION_DAILY_LIMIT", "20"))
-PREMIUM_DAILY_LIMIT = int(environ.get("PREMIUM_DAILY_LIMIT", "50"))
+DAILY_LIMIT = int(environ.get("DAILY_LIMIT", "10"))
+VERIFICATION_DAILY_LIMIT = int(environ.get("VERIFICATION_DAILY_LIMIT", "30"))
+PREMIUM_DAILY_LIMIT = int(environ.get("PREMIUM_DAILY_LIMIT", "70"))
 
 # =========================================================
 # 🔗 SHORTLINK & VERIFICATION
