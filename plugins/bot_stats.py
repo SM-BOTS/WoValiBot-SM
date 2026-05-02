@@ -167,11 +167,11 @@ async def all_users_stats(client, message: Message):
                     expiry_dt = expiry_time.astimezone(pytz.timezone("Asia/Kolkata"))
                     expiry_date = expiry_dt.strftime('%d-%m-%Y')
                     expiry_clock = expiry_dt.strftime('%I:%M:%S %p')
-                    user_entry += f"\n╰ 🗓 Expiry: {expiry_date} at {expiry_clock}"
+                    try:
+            user_entry += f"\n╰ 🗓 Expiry: {expiry_date} at {expiry_clock}"
         except Exception as e:
             print(f"Expiry date parse error for user {user_id}: {e}")
-        
-        # Is line ke peeche ke spaces utne hi rakhein jitne 'except' ke peeche hain
+
         await message.reply_text(
             text=user_entry,
             reply_markup=InlineKeyboardMarkup(
