@@ -176,7 +176,7 @@ async def all_users_stats(client, message: Message):
             text=user_entry,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton("• Purchase Subscription •", url="https://t.me/@Kimiko_LINKS")
+                    InlineKeyboardButton("• Purchase Subscription •", url="https://t.me/Kimiko_LINKS")
                 ]]
             )
         )
