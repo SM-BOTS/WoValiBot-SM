@@ -160,18 +160,21 @@ async def all_users_stats(client, message: Message):
         )
 
         # -------- PREMIUM EXPIRY --------
+        # -------- PREMIUM EXPIRY --------
         expiry_time = user.get("expiry_time")
         if is_premium and expiry_time:
             try:
                 if isinstance(expiry_time, datetime):
+                    if expiry_time.tzinfo is None:
+                        expiry_time = pytz.utc.localize(expiry_time)
                     expiry_dt = expiry_time.astimezone(pytz.timezone("Asia/Kolkata"))
                     expiry_date = expiry_dt.strftime('%d-%m-%Y')
                     expiry_clock = expiry_dt.strftime('%I:%M:%S %p')
-                    try:
-            user_entry += f"\n╰ 🗓 Expiry: {expiry_date} at {expiry_clock}"
-        except Exception as e:
-            print(f"Expiry date parse error for user {user_id}: {e}")
+                    user_entry += f"\n╰ 🗓 Expiry: {expiry_date} at {expiry_clock}"
+            except Exception as e:
+                print(f"Expiry date parse error for user {user_id}: {e}")
 
+        # --- YE WALI LINE EK HI LINE MEIN HONI CHAHIYE ---
         await message.reply_text(
             text=user_entry,
             reply_markup=InlineKeyboardMarkup(
