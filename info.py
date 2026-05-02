@@ -80,7 +80,7 @@ QR_CODE_IMAGE = environ.get("QR_CODE_IMAGE", "https://i.ibb.co/NnZZxQRt/photo-20
 START_PIC = environ.get("START_PIC", "https://files.catbox.moe/7pifzq.mp4")
 AUTH_PICS = environ.get("AUTH_PICS", "")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://n.uguu.se/gwWkimkY.jpg")
-NO_IMG = environ.get("NO_IMG", "")
+NO_IMG = environ.get("NO_IMG", "none")
 
 # =========================================================
 # 🌐 WEB APP
